@@ -12,7 +12,7 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "glog-9251d89e-75e2-4991-811f-329409f78965",
+              "id": "glog-307a1059-3219-4a88-8df4-5be79a63772a",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -24,7 +24,7 @@
               }
             },
             {
-              "id": "glog-af7d5fbe-19fd-4a23-af1d-5163c166e31b",
+              "id": "glog-a000d59f-61ab-4c50-b68d-9342d71718b2",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -36,7 +36,7 @@
               }
             },
             {
-              "id": "glog-c1d11f52-2e2f-4132-a551-ba890ceaf83f",
+              "id": "glog-165d7d30-5936-4ffc-b828-883dad2094b1",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -48,7 +48,7 @@
               }
             },
             {
-              "id": "glog-e475d08e-ee89-415d-80a3-35bc448950ee",
+              "id": "glog-48043342-ebf5-4687-a88c-422fb28ecb7a",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -60,7 +60,7 @@
               }
             },
             {
-              "id": "glog-aff43b64-18bd-4882-a524-f33cb76aa186",
+              "id": "glog-1cfb9ee5-23c9-488a-bc10-55db8f62ed95",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -72,7 +72,7 @@
               }
             },
             {
-              "id": "glog-30e206ef-d448-4d10-a0ce-0b84a864d5d6",
+              "id": "glog-102fed0b-fb8d-4b96-8bef-a50ebded7aee",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -84,7 +84,7 @@
               }
             },
             {
-              "id": "glog-42d85de2-aa94-43be-84c4-2c29880cba71",
+              "id": "glog-82389034-16ff-4b2e-b431-8367ec5eb631",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -96,7 +96,7 @@
               }
             },
             {
-              "id": "glog-7a04ddf9-8671-442f-9714-2b2b681faeef",
+              "id": "glog-61d91f03-e3dc-48a2-9e26-2c9afc32c34c",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -108,7 +108,7 @@
               }
             },
             {
-              "id": "glog-5a5297f6-e561-407c-98db-e189f82d8b65",
+              "id": "glog-6b8c56ae-86bc-4a3f-99f7-6886239a7014",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -120,7 +120,7 @@
               }
             },
             {
-              "id": "glog-6abfd87d-3ea1-40a1-8826-4b7c903c2dee",
+              "id": "glog-b1f6074a-c19e-4e33-b8e2-2ffb98e713e2",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -132,7 +132,7 @@
               }
             },
             {
-              "id": "glog-ab42c02d-3beb-4a04-9c00-dcfa7b8b8e09",
+              "id": "glog-96977fc8-2c2d-4415-a861-e97177f1140e",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -144,7 +144,7 @@
               }
             },
             {
-              "id": "glog-4dd99a25-ec4e-42d9-a914-55cd84a38b9b",
+              "id": "glog-ba235924-57a0-45b8-82a6-2781d62f94f5",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -156,7 +156,7 @@
               }
             },
             {
-              "id": "glog-4ceb515d-cfb4-4c76-a923-5a422d65784f",
+              "id": "glog-46ce89c3-3342-4073-8067-2808330a1eb1",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -168,7 +168,7 @@
               }
             },
             {
-              "id": "glog-14f03561-17e6-4f2d-95ea-60614fa1fcf9",
+              "id": "glog-0224fe9d-3f81-4a72-bb0a-92346f71277a",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -180,7 +180,7 @@
               }
             },
             {
-              "id": "glog-34738388-0acf-4eae-b38c-c383c9a0956f",
+              "id": "glog-01dfc832-9ad4-46e1-a518-2bada3b5b78b",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -192,7 +192,7 @@
               }
             },
             {
-              "id": "glog-4e315f70-c47f-47d2-82bb-739913a53c3b",
+              "id": "glog-543263cf-810b-4174-8008-e253e83a370a",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -204,7 +204,7 @@
               }
             },
             {
-              "id": "glog-aa9d3dc5-d143-40cd-ba98-767a1692d91c",
+              "id": "glog-81ca95a8-9330-4984-8702-07ce1f23df44",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -216,7 +216,7 @@
               }
             },
             {
-              "id": "glog-bc0c2cdd-68bf-401b-917b-59f3c09ff155",
+              "id": "glog-bd48077b-013c-4384-bb46-e56676ba2d85",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -228,7 +228,7 @@
               }
             },
             {
-              "id": "glog-c98556da-872b-4839-8a25-97dd712d724b",
+              "id": "glog-28e01cd1-530e-4645-8af0-f162c8cc0300",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -240,7 +240,7 @@
               }
             },
             {
-              "id": "glog-2c3f8862-a13d-4aaf-aadb-b4493f4b20ae",
+              "id": "glog-722e02d8-8d44-4a7c-b660-343d3bc7c216",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -252,7 +252,7 @@
               }
             },
             {
-              "id": "glog-da0adb73-af92-448d-a90d-ea28def2a224",
+              "id": "glog-4eb6080f-281f-462b-9663-6c2f31c7ded4",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -264,7 +264,7 @@
               }
             },
             {
-              "id": "glog-4d6dc73c-2b15-40a3-9866-0915867aa92d",
+              "id": "glog-f06d4acf-252f-4553-8843-3313b7bf0ce5",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -276,7 +276,7 @@
               }
             },
             {
-              "id": "glog-b767fdba-8b79-4bc4-a411-d8e2a77fcabb",
+              "id": "glog-6dc0d3f6-b910-4343-bf74-ea9ab987c0e8",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -288,7 +288,7 @@
               }
             },
             {
-              "id": "glog-e8f0e089-f17b-4307-a7b3-567cb14810cd",
+              "id": "glog-a046034f-b6fe-4e52-9c99-aae8740a35bc",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected Prohibited C Function\" vulnerability in C++ refers to the use of insecure C library functions that can lead to various security issues such as buffer overflows, format string vulnerabilities, integer overflows, etc. These functions are often prohibited in secure coding standards and should be avoided.\n\nIn this case, the `fopen` function is used, which can lead to vulnerabilities if not used correctly. The `fopen` function opens a file and returns a pointer to the file. If the file does not exist or cannot be found, the function returns a null pointer. This can lead to null pointer dereferencing if not handled correctly.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use safer alternatives to `fopen` such as `fopen_s` (in C11) or file stream objects in C++. These alternatives provide better error handling and are less prone to vulnerabilities.\n\n## Source Code Fix Recommendation\n\nReplace the `fopen` function with `fopen_s` or file stream objects. Here is an example of how to use `fopen_s`:\n\n```cpp\nFILE* fp = NULL;\nerrno_t err = fopen_s(&fp, \"file.txt\", \"r\");\nif (err != 0) {\n    // Handle error\n} else {\n    // Use file\n    fclose(fp);\n}\n```\n\nAnd here is an example of how to use file stream objects:\n\n```cpp\n#include <fstream>\n\nstd::ifstream file(\"file.txt\");\nif (!file) {\n    // Handle error\n} else {\n    // Use file\n    file.close();\n}\n```\n\n## Library Dependencies\n\nThe code examples above require the following library dependencies:\n\n- `<stdio.h>` or `<cstdio>` for `fopen_s`\n- `<fstream>` for file stream objects\n\n## References\n"
@@ -300,7 +300,7 @@
               }
             },
             {
-              "id": "glog-47a2c8a3-2f2d-47ea-ac77-948b810d10d3",
+              "id": "glog-9d63b594-442a-43dd-a710-8afe2ead54aa",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe \"Prohibited C Function Identified\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are known to be dangerous due to their potential to cause buffer overflow, leading to arbitrary code execution, denial of service, or information disclosure. One such function is `sprintf`.\n\nThe `sprintf` function is used to write formatted data to a string. However, it does not check the size of the destination buffer, which can lead to buffer overflow if the source data is larger than the destination buffer.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, use safer alternatives that check the size of the destination buffer. In the case of `sprintf`, a safer alternative is `snprintf`, which takes an additional parameter specifying the size of the destination buffer.\n\n## Source Code Fix Recommendation\n\nReplace `sprintf` with `snprintf` as shown below:\n\n```cpp\n// Vulnerable code\nchar buffer[50];\nsprintf(buffer, \"%s\", some_large_string);\n\n// Fixed code\nchar buffer[50];\nsnprintf(buffer, sizeof(buffer), \"%s\", some_large_string);\n```\n\n## Library Dependencies\n\nThe code example requires the C standard library (`<cstdio>` or `<stdio.h>` in C++).\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -312,7 +312,7 @@
               }
             },
             {
-              "id": "glog-062f2f39-31aa-471f-a163-30e618a483ee",
+              "id": "glog-09163ae4-9ef2-4cc2-a194-0f2ab478a99d",
               "help": {
                 "text": "",
                 "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability in C++ programming arises when certain C standard library functions, which are considered unsafe or deprecated, are used in the code. These functions can lead to security issues such as buffer overflows, data corruption, or undefined behavior. The `qsort` function, while not inherently unsafe, can be misused if the comparison function provided is not implemented correctly, leading to potential vulnerabilities.\n\n### General Mitigation Advice\n\n1. **Use Safer Alternatives**: Prefer using C++ standard library functions and algorithms that provide better type safety and are less error-prone.\n2. **Implement Correct Comparison Functions**: Ensure that the comparison function used with `qsort` is implemented correctly and handles all edge cases.\n3. **Static Analysis Tools**: Use static analysis tools to detect the use of prohibited or unsafe functions in the codebase.\n4. **Code Review**: Regularly review code to ensure that unsafe functions are not used and that safer alternatives are considered.\n\n### Source Code Fix Recommendation\n\nIf you are using `qsort`, consider replacing it with `std::sort` from the C++ Standard Library, which is type-safe and generally more efficient.\n\n#### Original Code Using `qsort`\n\n```cpp\n#include <cstdlib>\n\nint compare(const void* a, const void* b) {\n    return (*(int*)a - *(int*)b);\n}\n\nvoid sortArray(int* array, size_t size) {\n    qsort(array, size, sizeof(int), compare);\n}\n```\n\n#### Fixed Code Using `std::sort`\n\n```cpp\n#include <algorithm>\n#include <vector>\n\nvoid sortArray(std::vector<int>& array) {\n    std::sort(array.begin(), array.end());\n}\n```\n\n### Library Dependencies\n\nFor the original code using `qsort`:\n- `<cstdlib>`: Required for `qsort`.\n\nFor the fixed code using `std::sort`:\n- `<algorithm>`: Required for `std::sort`.\n- `<vector>`: Required for using `std::vector`.\n\n### Relevant Resources\n\n- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n- [CWE-676: Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)\n\nThese links are verified to be active and accessible for anonymous users."
@@ -324,7 +324,7 @@
               }
             },
             {
-              "id": "glog-66f7590d-c919-4c20-8cdf-e3ea216d14be",
+              "id": "glog-8ca1c390-aa49-458b-b470-98da9b7ec8e3",
               "help": {
                 "text": "",
                 "markdown": "### Description\n\nThe vulnerability associated with the `strlen` function in C++ arises when it is used without proper validation of the input data, leading to potential buffer overflow or segmentation faults. This can occur if `strlen` is called on a string that is not null-terminated or if the input is not properly validated, which can result in reading beyond the intended memory bounds.\n\n### General Mitigation Advice\n\n1. **Input Validation**: Always validate input data before processing it. Ensure that strings are null-terminated and within expected length limits.\n2. **Use Safer Alternatives**: Consider using safer string handling functions like `strnlen` or C++ standard library alternatives such as `std::string` which manage memory more safely.\n3. **Bounds Checking**: Implement bounds checking to ensure that buffer sizes are respected and that operations do not exceed allocated memory.\n\n### Source Code Fix Recommendation\n\nTo mitigate the vulnerability when using `strlen(ent->d_name)`, ensure that `ent->d_name` is a valid, null-terminated string and consider using safer alternatives or additional checks:\n\n```cpp\n#include <iostream>\n#include <cstring>\n#include <dirent.h> // Required for DIR and dirent\n\nint main() {\n    DIR *dir;\n    struct dirent *ent;\n    if ((dir = opendir(\"/some/directory\")) != nullptr) {\n        while ((ent = readdir(dir)) != nullptr) {\n            // Ensure the string is null-terminated and within expected bounds\n            size_t name_length = strnlen(ent->d_name, MAX_EXPECTED_LENGTH);\n            if (name_length < MAX_EXPECTED_LENGTH) {\n                std::cout << \"Directory entry name: \" << ent->d_name << \" with length: \" << name_length << std::endl;\n            } else {\n                std::cerr << \"Warning: Directory entry name is too long or not null-terminated.\" << std::endl;\n            }\n        }\n        closedir(dir);\n    } else {\n        perror(\"Could not open directory\");\n        return EXIT_FAILURE;\n    }\n    return EXIT_SUCCESS;\n}\n```\n\n### Library Dependencies\n\nTo execute the above code example, the following libraries are required:\n\n- `<iostream>`: For input and output stream operations.\n- `<cstring>`: For C-style string handling functions.\n- `<dirent.h>`: For directory operations, specifically `DIR` and `struct dirent`.\n\n### OWASP Resources\n\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n\n### Common Weakness Enumeration (CWE)\n\n- [CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)\n- [CWE-126: Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)"
@@ -336,7 +336,7 @@
               }
             },
             {
-              "id": "glog-93053672-f28d-4078-875e-a3a31667a666",
+              "id": "glog-ab809ab2-e64b-44e5-bc8d-3fa696216f9c",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -348,7 +348,7 @@
               }
             },
             {
-              "id": "glog-9af47866-3487-4118-ac13-5030a3fa1a9a",
+              "id": "glog-035ee963-c398-4bfe-87c7-e5e8a84835a1",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -360,7 +360,7 @@
               }
             },
             {
-              "id": "glog-c89ea24d-0d09-41ef-b96c-ad10a732f654",
+              "id": "glog-48d54b1b-1623-4bc3-a9f3-562ad99ebe01",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -372,7 +372,7 @@
               }
             },
             {
-              "id": "glog-9ec08899-cd72-4aad-9126-2c2de66e4a9b",
+              "id": "glog-3e142c60-d627-45f1-b111-b136e5f323b4",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe \"Prohibited C Function Identified\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are known to be dangerous due to their potential to cause buffer overflows, format string vulnerabilities, or other issues. These functions are often prohibited in secure coding standards.\n\nThe `strerror` function is one such function. It returns a pointer to a string that describes the error code passed in the argument errno. The problem with `strerror` is that it is not thread-safe. If multiple threads call `strerror`, they might get incorrect results because `strerror` uses a static buffer to hold the string.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, use thread-safe alternatives to `strerror`, such as `strerror_r` or `strerror_s`. These functions take an additional argument, a buffer, where the error message will be stored. This makes them safe to use in multi-threaded programs.\n\n## Source Code Fix Recommendation\n\nReplace the use of `strerror` with `strerror_r` or `strerror_s`. Here is an example:\n\n```cpp\n#include <string.h>\n#include <errno.h>\n\nvoid some_function() {\n    int errnum = errno;\n    char buf[1024];\n\n    if (strerror_r(errnum, buf, sizeof(buf)) == 0) {\n        printf(\"Error: %s\\n\", buf);\n    } else {\n        printf(\"Unknown error occurred\\n\");\n    }\n}\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- `<string.h>`: for `strerror_r`\n- `<errno.h>`: for `errno`\n\n## OWASP and CWE Links\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -384,7 +384,7 @@
               }
             },
             {
-              "id": "glog-6f3dd218-d93d-4214-82b5-c29dbb401445",
+              "id": "glog-cf64c4b5-a650-4c94-9d85-632739f3558f",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -396,7 +396,7 @@
               }
             },
             {
-              "id": "glog-17e92553-25eb-4607-8513-6395fa104514",
+              "id": "glog-d782bc8a-ea72-4dbd-b428-4c54b855509b",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe \"Prohibited C Function Identified\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are known to be dangerous due to their potential to cause buffer overflows, format string vulnerabilities, or other issues. These functions are often prohibited in secure coding standards.\n\nThe `strerror` function is one such function. It returns a pointer to a string that describes the error code passed in the argument errno. The problem with `strerror` is that it is not thread-safe. If multiple threads call `strerror`, they might get incorrect results because `strerror` uses a static buffer to hold the string.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, use thread-safe alternatives to `strerror`, such as `strerror_r` or `strerror_s`. These functions take an additional argument, a buffer, where the error message will be stored. This makes them safe to use in multi-threaded programs.\n\n## Source Code Fix Recommendation\n\nReplace the use of `strerror` with `strerror_r` or `strerror_s`. Here is an example:\n\n```cpp\n#include <string.h>\n#include <errno.h>\n\nvoid some_function() {\n    int errnum = errno;\n    char buf[1024];\n\n    if (strerror_r(errnum, buf, sizeof(buf)) == 0) {\n        printf(\"Error: %s\\n\", buf);\n    } else {\n        printf(\"Unknown error occurred\\n\");\n    }\n}\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- `<string.h>`: for `strerror_r`\n- `<errno.h>`: for `errno`\n\n## OWASP and CWE Links\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -408,7 +408,7 @@
               }
             },
             {
-              "id": "glog-45a2868c-7717-41e0-9403-16787a4e67ae",
+              "id": "glog-20a43b65-dffd-480c-9614-e627ac87805c",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\n\"Detected C Function Prohibited\" vulnerability in C++ programming language refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflow, format string vulnerabilities, or other types of security issues. One such function is `printf`.\n\nThe `printf` function is a common function in C programming for output formatting. However, it can lead to vulnerabilities if not used correctly. For instance, if user-supplied data is passed directly to `printf` as the format string, it can lead to a format string vulnerability, which can allow an attacker to read or write to arbitrary memory, leading to information disclosure or code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `printf` and similar functions with variable format strings. Instead, use safer alternatives that do not allow for format string vulnerabilities, such as `puts` or `fputs` for simple string output. If formatted output is necessary, ensure that the format string is a constant and not user-supplied data.\n\n## Source Code Fix Recommendation\n\nInstead of:\n\n```cpp\nchar* user_supplied_string;\n// ...\nprintf(user_supplied_string);\n```\n\nUse:\n\n```cpp\nchar* user_supplied_string;\n// ...\nputs(user_supplied_string);\n```\n\nOr:\n\n```cpp\nchar* user_supplied_string;\n// ...\nfputs(user_supplied_string, stdout);\n```\n\n## Library Dependencies\n\nThe code examples above require the C standard library, which is typically included with `#include <stdio.h>`.\n\n## References\n\n- [OWASP C++ Secure Coding Practices](https://cheatsheetseries.owasp.org/cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html)"
@@ -431,7 +431,7 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "glog-9251d89e-75e2-4991-811f-329409f78965",
+          "ruleId": "glog-307a1059-3219-4a88-8df4-5be79a63772a",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -471,7 +471,7 @@
           }
         },
         {
-          "ruleId": "glog-af7d5fbe-19fd-4a23-af1d-5163c166e31b",
+          "ruleId": "glog-a000d59f-61ab-4c50-b68d-9342d71718b2",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -511,7 +511,7 @@
           }
         },
         {
-          "ruleId": "glog-c1d11f52-2e2f-4132-a551-ba890ceaf83f",
+          "ruleId": "glog-165d7d30-5936-4ffc-b828-883dad2094b1",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -551,7 +551,7 @@
           }
         },
         {
-          "ruleId": "glog-e475d08e-ee89-415d-80a3-35bc448950ee",
+          "ruleId": "glog-48043342-ebf5-4687-a88c-422fb28ecb7a",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -591,7 +591,7 @@
           }
         },
         {
-          "ruleId": "glog-aff43b64-18bd-4882-a524-f33cb76aa186",
+          "ruleId": "glog-1cfb9ee5-23c9-488a-bc10-55db8f62ed95",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -631,7 +631,7 @@
           }
         },
         {
-          "ruleId": "glog-30e206ef-d448-4d10-a0ce-0b84a864d5d6",
+          "ruleId": "glog-102fed0b-fb8d-4b96-8bef-a50ebded7aee",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -671,7 +671,7 @@
           }
         },
         {
-          "ruleId": "glog-42d85de2-aa94-43be-84c4-2c29880cba71",
+          "ruleId": "glog-82389034-16ff-4b2e-b431-8367ec5eb631",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -711,7 +711,7 @@
           }
         },
         {
-          "ruleId": "glog-7a04ddf9-8671-442f-9714-2b2b681faeef",
+          "ruleId": "glog-61d91f03-e3dc-48a2-9e26-2c9afc32c34c",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -751,7 +751,7 @@
           }
         },
         {
-          "ruleId": "glog-5a5297f6-e561-407c-98db-e189f82d8b65",
+          "ruleId": "glog-6b8c56ae-86bc-4a3f-99f7-6886239a7014",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -791,7 +791,7 @@
           }
         },
         {
-          "ruleId": "glog-6abfd87d-3ea1-40a1-8826-4b7c903c2dee",
+          "ruleId": "glog-b1f6074a-c19e-4e33-b8e2-2ffb98e713e2",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -831,7 +831,7 @@
           }
         },
         {
-          "ruleId": "glog-ab42c02d-3beb-4a04-9c00-dcfa7b8b8e09",
+          "ruleId": "glog-96977fc8-2c2d-4415-a861-e97177f1140e",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -871,7 +871,7 @@
           }
         },
         {
-          "ruleId": "glog-4dd99a25-ec4e-42d9-a914-55cd84a38b9b",
+          "ruleId": "glog-ba235924-57a0-45b8-82a6-2781d62f94f5",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -911,7 +911,7 @@
           }
         },
         {
-          "ruleId": "glog-4ceb515d-cfb4-4c76-a923-5a422d65784f",
+          "ruleId": "glog-46ce89c3-3342-4073-8067-2808330a1eb1",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -951,7 +951,7 @@
           }
         },
         {
-          "ruleId": "glog-14f03561-17e6-4f2d-95ea-60614fa1fcf9",
+          "ruleId": "glog-0224fe9d-3f81-4a72-bb0a-92346f71277a",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -991,7 +991,7 @@
           }
         },
         {
-          "ruleId": "glog-34738388-0acf-4eae-b38c-c383c9a0956f",
+          "ruleId": "glog-01dfc832-9ad4-46e1-a518-2bada3b5b78b",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1031,7 +1031,7 @@
           }
         },
         {
-          "ruleId": "glog-4e315f70-c47f-47d2-82bb-739913a53c3b",
+          "ruleId": "glog-543263cf-810b-4174-8008-e253e83a370a",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1071,7 +1071,7 @@
           }
         },
         {
-          "ruleId": "glog-aa9d3dc5-d143-40cd-ba98-767a1692d91c",
+          "ruleId": "glog-81ca95a8-9330-4984-8702-07ce1f23df44",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1111,7 +1111,7 @@
           }
         },
         {
-          "ruleId": "glog-bc0c2cdd-68bf-401b-917b-59f3c09ff155",
+          "ruleId": "glog-bd48077b-013c-4384-bb46-e56676ba2d85",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1151,7 +1151,7 @@
           }
         },
         {
-          "ruleId": "glog-c98556da-872b-4839-8a25-97dd712d724b",
+          "ruleId": "glog-28e01cd1-530e-4645-8af0-f162c8cc0300",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1191,7 +1191,7 @@
           }
         },
         {
-          "ruleId": "glog-2c3f8862-a13d-4aaf-aadb-b4493f4b20ae",
+          "ruleId": "glog-722e02d8-8d44-4a7c-b660-343d3bc7c216",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1231,7 +1231,7 @@
           }
         },
         {
-          "ruleId": "glog-da0adb73-af92-448d-a90d-ea28def2a224",
+          "ruleId": "glog-4eb6080f-281f-462b-9663-6c2f31c7ded4",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1271,7 +1271,7 @@
           }
         },
         {
-          "ruleId": "glog-4d6dc73c-2b15-40a3-9866-0915867aa92d",
+          "ruleId": "glog-f06d4acf-252f-4553-8843-3313b7bf0ce5",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1311,7 +1311,7 @@
           }
         },
         {
-          "ruleId": "glog-b767fdba-8b79-4bc4-a411-d8e2a77fcabb",
+          "ruleId": "glog-6dc0d3f6-b910-4343-bf74-ea9ab987c0e8",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1351,7 +1351,7 @@
           }
         },
         {
-          "ruleId": "glog-e8f0e089-f17b-4307-a7b3-567cb14810cd",
+          "ruleId": "glog-a046034f-b6fe-4e52-9c99-aae8740a35bc",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1391,7 +1391,7 @@
           }
         },
         {
-          "ruleId": "glog-47a2c8a3-2f2d-47ea-ac77-948b810d10d3",
+          "ruleId": "glog-9d63b594-442a-43dd-a710-8afe2ead54aa",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1431,7 +1431,7 @@
           }
         },
         {
-          "ruleId": "glog-062f2f39-31aa-471f-a163-30e618a483ee",
+          "ruleId": "glog-09163ae4-9ef2-4cc2-a194-0f2ab478a99d",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1471,7 +1471,7 @@
           }
         },
         {
-          "ruleId": "glog-66f7590d-c919-4c20-8cdf-e3ea216d14be",
+          "ruleId": "glog-8ca1c390-aa49-458b-b470-98da9b7ec8e3",
           "kind": "fail",
           "level": "note",
           "message": {
@@ -1559,7 +1559,7 @@
           }
         },
         {
-          "ruleId": "glog-93053672-f28d-4078-875e-a3a31667a666",
+          "ruleId": "glog-ab809ab2-e64b-44e5-bc8d-3fa696216f9c",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1599,7 +1599,7 @@
           }
         },
         {
-          "ruleId": "glog-9af47866-3487-4118-ac13-5030a3fa1a9a",
+          "ruleId": "glog-035ee963-c398-4bfe-87c7-e5e8a84835a1",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1639,7 +1639,7 @@
           }
         },
         {
-          "ruleId": "glog-c89ea24d-0d09-41ef-b96c-ad10a732f654",
+          "ruleId": "glog-48d54b1b-1623-4bc3-a9f3-562ad99ebe01",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1679,7 +1679,7 @@
           }
         },
         {
-          "ruleId": "glog-9ec08899-cd72-4aad-9126-2c2de66e4a9b",
+          "ruleId": "glog-3e142c60-d627-45f1-b111-b136e5f323b4",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1719,7 +1719,7 @@
           }
         },
         {
-          "ruleId": "glog-6f3dd218-d93d-4214-82b5-c29dbb401445",
+          "ruleId": "glog-cf64c4b5-a650-4c94-9d85-632739f3558f",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1759,7 +1759,7 @@
           }
         },
         {
-          "ruleId": "glog-17e92553-25eb-4607-8513-6395fa104514",
+          "ruleId": "glog-d782bc8a-ea72-4dbd-b428-4c54b855509b",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -1799,7 +1799,7 @@
           }
         },
         {
-          "ruleId": "glog-45a2868c-7717-41e0-9403-16787a4e67ae",
+          "ruleId": "glog-20a43b65-dffd-480c-9614-e627ac87805c",
           "kind": "fail",
           "level": "warning",
           "message": {
