@@ -94,6 +94,34 @@
                   "DS154189"
                 ]
               }
+            },
+            {
+              "id": "DS154189",
+              "name": "BannedCFunctionDetected",
+              "shortDescription": {
+                "text": "These functions are historically error-prone and have been associated with a significant number of vulnerabilities. Most of these functions have safer alternatives, such as replacing 'strcpy' with 'strlcpy' or 'strcpy_s'."
+              },
+              "fullDescription": {
+                "text": "Banned C function detected: These functions are historically error-prone and have been associated with a significant number of vulnerabilities. Most of these functions have safer alternatives, such as replacing 'strcpy' with 'strlcpy' or 'strcpy_s'."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "helpUri": "https://github.com/Microsoft/DevSkim/blob/main/guidance/DS154189.md",
+              "help": {
+                "text": "These functions are historically error-prone and have been associated with a significant number of vulnerabilities. Most of these functions have safer alternatives, such as replacing 'strcpy' with 'strlcpy' or 'strcpy_s'.",
+                "markdown": "Visit [https://github.com/Microsoft/DevSkim/blob/main/guidance/DS154189.md](https://github.com/Microsoft/DevSkim/blob/main/guidance/DS154189.md) for guidance on this issue."
+              },
+              "properties": {
+                "DevSkimSeverity": "Moderate",
+                "DevSkimConfidence": "High",
+                "precision": "high",
+                "problem.severity": "warning",
+                "tags": [
+                  "DS154189"
+                ]
+              }
             }
           ],
           "language": "en-US",
@@ -125,86 +153,6 @@
                   "endLine": 450,
                   "endColumn": 7,
                   "charOffset": 11127,
-                  "charLength": 6,
-                  "snippet": {
-                    "text": "printf",
-                    "rendered": {
-                      "text": "printf",
-                      "markdown": "`printf`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "DS154189",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
-                  "startLine": 458,
-                  "startColumn": 2,
-                  "endLine": 458,
-                  "endColumn": 8,
-                  "charOffset": 11259,
-                  "charLength": 6,
-                  "snippet": {
-                    "text": "printf",
-                    "rendered": {
-                      "text": "printf",
-                      "markdown": "`printf`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "DS154189",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
-                  "startLine": 437,
-                  "startColumn": 2,
-                  "endLine": 437,
-                  "endColumn": 8,
-                  "charOffset": 10788,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -280,6 +228,46 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
+                  "startLine": 437,
+                  "startColumn": 2,
+                  "endLine": 437,
+                  "endColumn": 8,
+                  "charOffset": 10788,
+                  "charLength": 6,
+                  "snippet": {
+                    "text": "printf",
+                    "rendered": {
+                      "text": "printf",
+                      "markdown": "`printf`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "DS154189",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
                   "startLine": 427,
                   "startColumn": 1,
                   "endLine": 427,
@@ -320,11 +308,11 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 413,
-                  "startColumn": 1,
-                  "endLine": 413,
-                  "endColumn": 7,
-                  "charOffset": 10011,
+                  "startLine": 404,
+                  "startColumn": 2,
+                  "endLine": 404,
+                  "endColumn": 8,
+                  "charOffset": 9796,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -360,11 +348,51 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 404,
+                  "startLine": 421,
                   "startColumn": 2,
-                  "endLine": 404,
+                  "endLine": 421,
                   "endColumn": 8,
-                  "charOffset": 9796,
+                  "charOffset": 10285,
+                  "charLength": 6,
+                  "snippet": {
+                    "text": "printf",
+                    "rendered": {
+                      "text": "printf",
+                      "markdown": "`printf`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "DS154189",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
+                  "startLine": 413,
+                  "startColumn": 1,
+                  "endLine": 413,
+                  "endColumn": 7,
+                  "charOffset": 10011,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -560,46 +588,6 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 378,
-                  "startColumn": 2,
-                  "endLine": 378,
-                  "endColumn": 8,
-                  "charOffset": 9005,
-                  "charLength": 6,
-                  "snippet": {
-                    "text": "printf",
-                    "rendered": {
-                      "text": "printf",
-                      "markdown": "`printf`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "DS154189",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
                   "startLine": 352,
                   "startColumn": 1,
                   "endLine": 352,
@@ -640,11 +628,11 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 349,
-                  "startColumn": 2,
-                  "endLine": 349,
-                  "endColumn": 8,
-                  "charOffset": 8209,
+                  "startLine": 355,
+                  "startColumn": 1,
+                  "endLine": 355,
+                  "endColumn": 7,
+                  "charOffset": 8336,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -680,11 +668,11 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 355,
+                  "startLine": 345,
                   "startColumn": 1,
-                  "endLine": 355,
+                  "endLine": 345,
                   "endColumn": 7,
-                  "charOffset": 8336,
+                  "charOffset": 8120,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -800,11 +788,51 @@
                   "uri": "ioctl_test.c"
                 },
                 "region": {
-                  "startLine": 272,
-                  "startColumn": 3,
-                  "endLine": 272,
-                  "endColumn": 9,
-                  "charOffset": 6384,
+                  "startLine": 349,
+                  "startColumn": 2,
+                  "endLine": 349,
+                  "endColumn": 8,
+                  "charOffset": 8209,
+                  "charLength": 6,
+                  "snippet": {
+                    "text": "printf",
+                    "rendered": {
+                      "text": "printf",
+                      "markdown": "`printf`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "DS154189",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
+                  "startLine": 378,
+                  "startColumn": 2,
+                  "endLine": 378,
+                  "endColumn": 8,
+                  "charOffset": 9005,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -845,46 +873,6 @@
                   "endLine": 298,
                   "endColumn": 8,
                   "charOffset": 7034,
-                  "charLength": 6,
-                  "snippet": {
-                    "text": "printf",
-                    "rendered": {
-                      "text": "printf",
-                      "markdown": "`printf`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "DS154189",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
-                  "startLine": 345,
-                  "startColumn": 1,
-                  "endLine": 345,
-                  "endColumn": 7,
-                  "charOffset": 8120,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
@@ -965,6 +953,46 @@
                   "endLine": 258,
                   "endColumn": 9,
                   "charOffset": 6106,
+                  "charLength": 6,
+                  "snippet": {
+                    "text": "printf",
+                    "rendered": {
+                      "text": "printf",
+                      "markdown": "`printf`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "DS154189",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
+                  "startLine": 272,
+                  "startColumn": 3,
+                  "endLine": 272,
+                  "endColumn": 9,
+                  "charOffset": 6384,
                   "charLength": 6,
                   "snippet": {
                     "text": "printf",
