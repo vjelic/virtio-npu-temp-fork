@@ -22,7 +22,7 @@ jobs:
         uses: ./.github/glog-action
         with:
           lang: 'cpp'
-          client: 'mural'
+          client: 'demo'
           debug: 'false'
           upload: 'true'
           github-token: ${{ secrets.PAT_TOKEN }}
