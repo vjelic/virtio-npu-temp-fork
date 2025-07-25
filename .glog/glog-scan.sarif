@@ -12,10 +12,10 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "glog-4ddf7245-1497-46a5-85be-e52b4e80adc8",
+              "id": "glog-022cbcd1-7992-40c8-9ff9-dd90ffcd5d33",
               "help": {
                 "text": "",
-                "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability refers to the use of certain C standard library functions that are considered unsafe or deprecated due to their potential to cause security issues such as buffer overflows, data corruption, or undefined behavior. In C++, using these functions can lead to vulnerabilities if not handled properly. The `qsort` function, while not inherently unsafe, can be misused if the comparator function or the data being sorted is not handled correctly.\n\n### General Mitigation Advice\n\n1. **Use Safer Alternatives**: Prefer using C++ standard library functions and algorithms that provide better type safety and are less error-prone, such as `std::sort`.\n2. **Validate Inputs**: Ensure that all inputs to the function are validated and sanitized to prevent unexpected behavior.\n3. **Proper Comparator Function**: Ensure that the comparator function used with `qsort` is correctly implemented and does not cause undefined behavior.\n4. **Bounds Checking**: Always perform bounds checking to prevent buffer overflows.\n\n### Source Code Fix Recommendation\n\nReplace the use of `qsort` with `std::sort` from the C++ Standard Library, which is type-safe and generally more efficient.\n\n```cpp\n#include <algorithm>\n#include <vector>\n#include <string>\n\n// Comparator function for std::sort\nbool compare(const std::string &a, const std::string &b) {\n    return a < b;\n}\n\nint main() {\n    std::vector<std::string> filenames = {\"file1.txt\", \"file2.txt\", \"file3.txt\"};\n    \n    // Use std::sort instead of qsort\n    std::sort(filenames.begin(), filenames.end(), compare);\n\n    return 0;\n}\n```\n\n### Library Dependencies\n\nTo execute the above code example, the following standard C++ library headers are required:\n\n- `<algorithm>`: For `std::sort`.\n- `<vector>`: For using `std::vector`.\n- `<string>`: For using `std::string`.\n\n### Relevant Resources\n\n- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n\n### Common Weakness Enumeration\n\n- [CWE-676: Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)"
+                "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability in C++ arises when unsafe C functions, such as `sprintf`, are used. These functions do not perform bounds checking on the destination buffer, which can lead to buffer overflow vulnerabilities. Buffer overflows can be exploited to execute arbitrary code, cause a program crash, or corrupt data.\n\n### General Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use safer alternatives that perform bounds checking. In C++, you can use `snprintf` or C++ string handling functions like `std::string` and `std::stringstream` to avoid buffer overflows.\n\n### Source Code Fix Recommendation\n\nReplace the use of `sprintf` with `snprintf` to ensure that the buffer size is respected:\n\n```cpp\n#include <cstdio>\n#include <cstring>\n\nconst size_t BUFFER_SIZE = 1024; // Define a suitable buffer size\n\nchar full_name[BUFFER_SIZE];\nsnprintf(full_name, BUFFER_SIZE, \"%s/%s\", pdi_dir, filenames[i]);\n```\n\nAlternatively, use C++ string handling:\n\n```cpp\n#include <string>\n\nstd::string full_name = std::string(pdi_dir) + \"/\" + filenames[i];\n```\n\n### Library Dependencies\n\nTo execute the code examples properly, the following standard libraries are required:\n\n- `<cstdio>` for `snprintf`\n- `<cstring>` for C-style string operations\n- `<string>` for C++ string handling\n\n### Relevant Resources\n\n- [OWASP: Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)\n- [CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)"
               },
               "properties": {
                 "tags": [
@@ -24,10 +24,10 @@
               }
             },
             {
-              "id": "glog-a5535c2f-904a-410b-adfb-5aed0c21d8e8",
+              "id": "glog-be871226-3488-4a49-b7b5-8e85553f9277",
               "help": {
                 "text": "",
-                "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability in C++ refers to the use of certain C standard library functions that are considered unsafe due to their potential to cause buffer overflows and other security issues. The `sprintf` function is one such function because it does not perform bounds checking on the destination buffer, which can lead to buffer overflow vulnerabilities if the input data exceeds the buffer size.\n\n### General Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use safer alternatives that perform bounds checking. In C++, you can use `snprintf` or `std::stringstream` to safely format strings. These alternatives help prevent buffer overflows by ensuring that the destination buffer is not overrun.\n\n### Source Code Fix Recommendation\n\nReplace the use of `sprintf` with `snprintf` to ensure that the buffer size is respected. Here is a fixed version of the code:\n\n```cpp\n#include <cstdio>\n#include <cstring>\n\nconst size_t BUFFER_SIZE = 1024;\n\nvoid safeFunction(const char* pdi_dir, const char* filenames[], size_t i) {\n    char full_name[BUFFER_SIZE];\n    snprintf(full_name, sizeof(full_name), \"%s/%s\", pdi_dir, filenames[i]);\n    // Use full_name safely\n}\n```\n\n### Library Dependencies\n\nTo execute the code example properly, the following standard libraries are required:\n\n- `<cstdio>`: For `snprintf`.\n- `<cstring>`: For string manipulation functions.\n\n### Relevant Resources\n\n- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n\n### Common Weakness Enumeration\n\n- [CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)\n- [CWE-676: Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)"
+                "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability refers to the use of certain C standard library functions that are considered unsafe or deprecated due to their potential to cause security issues such as buffer overflows, data corruption, or undefined behavior. In C++, using these functions can lead to vulnerabilities if not handled properly. The `qsort` function, while not inherently unsafe, can be problematic if the comparator function or the data being sorted is not managed correctly.\n\n### General Mitigation Advice\n\n1. **Use Safer Alternatives**: Prefer using C++ standard library functions like `std::sort` which provide type safety and better integration with C++ features.\n2. **Validate Inputs**: Ensure that all inputs to the function are validated and sanitized.\n3. **Proper Comparator**: Ensure that the comparator function used with `qsort` is correctly implemented and does not cause undefined behavior.\n4. **Memory Management**: Ensure that memory allocations and deallocations are handled properly to avoid leaks or corruption.\n\n### Source Code Fix Recommendation\n\nReplace the use of `qsort` with `std::sort` from the C++ Standard Library. This provides better type safety and integrates well with C++ idioms.\n\n```cpp\n#include <algorithm>\n#include <vector>\n#include <string>\n\n// Comparator function for std::sort\nbool compare(const std::string &a, const std::string &b) {\n    return a < b;\n}\n\nvoid sortFilenames(std::vector<std::string> &filenames) {\n    std::sort(filenames.begin(), filenames.end(), compare);\n}\n```\n\n### Library Dependencies\n\nTo execute the above code example, the following standard library headers are required:\n\n- `<algorithm>`: For `std::sort`.\n- `<vector>`: For using `std::vector`.\n- `<string>`: For using `std::string`.\n\n### Relevant Resources\n\n- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n- [Common Weakness Enumeration - CWE-676: Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)"
               },
               "properties": {
                 "tags": [
@@ -36,10 +36,22 @@
               }
             },
             {
-              "id": "glog-fe30a186-d38a-4cde-89a4-9707c6ef4738",
+              "id": "glog-11b9bb72-05d3-43aa-a2c6-466c9bbd3924",
               "help": {
                 "text": "",
-                "markdown": "### Description\n\nThe vulnerability associated with the use of the `strlen` function in C/C++ arises when the function is used without proper validation or bounds checking, potentially leading to buffer overflow or other memory-related issues. In the context of the code snippet `len = strlen(ent->d_name)`, if `ent->d_name` is not properly null-terminated or if it points to a memory region that is not properly allocated, it can cause undefined behavior, including reading beyond the allocated memory.\n\n### General Mitigation Advice\n\n1. **Input Validation**: Ensure that all input strings are properly null-terminated and within expected length limits before using `strlen`.\n2. **Bounds Checking**: Always perform bounds checking on strings to prevent buffer overflows.\n3. **Use Safer Alternatives**: Consider using safer string handling functions like `strnlen` which allows specifying a maximum length to prevent reading beyond the buffer.\n4. **Memory Management**: Ensure that memory is properly allocated and deallocated, and that pointers are not used after being freed.\n\n### Source Code Fix Recommendation\n\nTo mitigate the risk associated with the use of `strlen`, you can replace it with `strnlen` and specify a maximum length that is within the bounds of the allocated memory for `ent->d_name`.\n\n```cpp\n#include <cstring> // Required for strnlen\n#include <limits.h> // Required for PATH_MAX\n\n// Assuming ent->d_name is a character array with a known maximum size\nsize_t len = strnlen(ent->d_name, PATH_MAX);\n```\n\n### Library Dependencies\n\nTo execute the code example properly, the following libraries are required:\n\n- `<cstring>`: For `strnlen` function.\n- `<limits.h>`: For `PATH_MAX` which defines the maximum length of a path.\n\n### Relevant Resources\n\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n\n### Common Weakness Enumeration\n\n- [CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)\n- [CWE-126: Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)"
+                "markdown": "### Description\n\nThe \"Detection of Prohibited C Function\" vulnerability in C++ arises when certain C functions, which are considered unsafe or deprecated, are used in the code. These functions can lead to security issues such as buffer overflows, format string vulnerabilities, or improper resource management. The use of `fopen` is one such example, as it can lead to vulnerabilities if not handled correctly, especially when dealing with file paths and permissions.\n\n### General Mitigation Advice\n\n1. **Use Safer Alternatives**: Prefer using safer, more modern alternatives provided by C++ standard libraries or other secure libraries.\n2. **Input Validation**: Always validate inputs, especially file paths, to ensure they do not contain unexpected or malicious data.\n3. **Error Handling**: Implement robust error handling to manage and log errors effectively.\n4. **Least Privilege Principle**: Ensure the application runs with the least privileges necessary to perform its tasks.\n\n### Source Code Fix Recommendation\n\nTo mitigate the vulnerability associated with the use of `fopen`, consider using C++ standard library features such as `std::ifstream` for file operations, which provide better type safety and exception handling.\n\n#### Original Code\n\n```cpp\nFILE *fp = fopen(full_name, \"rb\");\n```\n\n#### Fixed Code\n\n```cpp\n#include <fstream>\n#include <iostream>\n#include <string>\n\nstd::ifstream openFile(const std::string& full_name) {\n    std::ifstream file(full_name, std::ios::binary);\n    if (!file.is_open()) {\n        std::cerr << \"Error opening file: \" << full_name << std::endl;\n        // Handle error appropriately\n    }\n    return file;\n}\n```\n\n### Library Dependencies\n\nTo execute the fixed code example, the following standard C++ library headers are required:\n\n- `<fstream>`: For file stream operations.\n- `<iostream>`: For input and output stream operations.\n- `<string>`: For using the `std::string` class.\n\n### Relevant Resources\n\n- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n\n### Common Weakness Enumeration\n\n- [CWE-676: Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)"
+              },
+              "properties": {
+                "tags": [
+                  "DS154189"
+                ]
+              }
+            },
+            {
+              "id": "glog-f0408dd6-1bea-4f8f-b2ae-77b8957c1592",
+              "help": {
+                "text": "",
+                "markdown": "### Description\n\nThe vulnerability related to the use of the `strlen` function in C/C++ arises when the function is used without proper validation or bounds checking, potentially leading to buffer overflow or other memory-related issues. In the specific case of `len = strlen(ent->d_name)`, if `ent->d_name` is not properly null-terminated or if it points to a memory region that is not properly allocated, it can cause undefined behavior, including reading beyond the allocated memory.\n\n### General Mitigation Advice\n\n1. **Input Validation**: Ensure that all input strings are properly null-terminated and come from trusted sources.\n2. **Bounds Checking**: Always check the length of the string and ensure it does not exceed the buffer size.\n3. **Use Safer Alternatives**: Consider using safer string handling functions like `strnlen` which allows specifying a maximum length to prevent reading beyond the buffer.\n\n### Source Code Fix Recommendation\n\nTo mitigate the risk associated with `strlen`, you can use `strnlen` to limit the number of characters read:\n\n```cpp\n#include <cstring>\n#include <dirent.h>\n#include <iostream>\n\n#define MAX_NAME_LENGTH 256\n\nint main() {\n    DIR *dir;\n    struct dirent *ent;\n    if ((dir = opendir(\".\")) != NULL) {\n        while ((ent = readdir(dir)) != NULL) {\n            size_t len = strnlen(ent->d_name, MAX_NAME_LENGTH);\n            if (len == MAX_NAME_LENGTH) {\n                std::cerr << \"Warning: File name too long, possible truncation.\" << std::endl;\n            }\n            // Process the file name safely\n            std::cout << \"File name: \" << ent->d_name << std::endl;\n        }\n        closedir(dir);\n    } else {\n        perror(\"Could not open directory\");\n        return EXIT_FAILURE;\n    }\n    return EXIT_SUCCESS;\n}\n```\n\n### Library Dependencies\n\nTo execute the above code, the following libraries are required:\n\n- `<cstring>`: For string handling functions.\n- `<dirent.h>`: For directory operations.\n- `<iostream>`: For input and output operations.\n\n### Relevant Resources\n\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)\n\n### Common Weakness Enumeration\n\n- [CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)\n- [CWE-126: Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)"
               },
               "properties": {
                 "tags": [
@@ -59,87 +71,7 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "glog-26147e89-9dce-48e8-9cc6-6c995245fa6e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
-                  "startLine": 250,
-                  "startColumn": 7,
-                  "endLine": 250,
-                  "endColumn": 12,
-                  "charOffset": 5945,
-                  "charLength": 5,
-                  "snippet": {
-                    "text": "fopen",
-                    "rendered": {
-                      "text": "fopen",
-                      "markdown": "`fopen`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "glog-4ddf7245-1497-46a5-85be-e52b4e80adc8",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Banned C function detected"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ioctl_test.c"
-                },
-                "region": {
-                  "startLine": 233,
-                  "startColumn": 1,
-                  "endLine": 233,
-                  "endColumn": 6,
-                  "charOffset": 5455,
-                  "charLength": 5,
-                  "snippet": {
-                    "text": "qsort",
-                    "rendered": {
-                      "text": "qsort",
-                      "markdown": "`qsort`"
-                    }
-                  },
-                  "sourceLanguage": "c"
-                }
-              }
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "Moderate",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.BannedFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "glog-a5535c2f-904a-410b-adfb-5aed0c21d8e8",
+          "ruleId": "glog-022cbcd1-7992-40c8-9ff9-dd90ffcd5d33",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -179,7 +111,87 @@
           }
         },
         {
-          "ruleId": "glog-fe30a186-d38a-4cde-89a4-9707c6ef4738",
+          "ruleId": "glog-be871226-3488-4a49-b7b5-8e85553f9277",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
+                  "startLine": 233,
+                  "startColumn": 1,
+                  "endLine": 233,
+                  "endColumn": 6,
+                  "charOffset": 5455,
+                  "charLength": 5,
+                  "snippet": {
+                    "text": "qsort",
+                    "rendered": {
+                      "text": "qsort",
+                      "markdown": "`qsort`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-11b9bb72-05d3-43aa-a2c6-466c9bbd3924",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Banned C function detected"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ioctl_test.c"
+                },
+                "region": {
+                  "startLine": 250,
+                  "startColumn": 7,
+                  "endLine": 250,
+                  "endColumn": 12,
+                  "charOffset": 5945,
+                  "charLength": 5,
+                  "snippet": {
+                    "text": "fopen",
+                    "rendered": {
+                      "text": "fopen",
+                      "markdown": "`fopen`"
+                    }
+                  },
+                  "sourceLanguage": "c"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "Moderate",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.BannedFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-f0408dd6-1bea-4f8f-b2ae-77b8957c1592",
           "kind": "fail",
           "level": "note",
           "message": {
